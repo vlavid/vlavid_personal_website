@@ -62,3 +62,7 @@ hero:
     <p>Olvídate de las siglas complicadas. Hablemos de promesas y confianza con los usuarios.</p>
   </a>
 </div>
+
+<client-only>
+  <Newsletter />
+</client-only>
