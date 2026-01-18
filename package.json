@@ -1,0 +1,27 @@
+{
+  "name": "vlavid_personal_website",
+  "version": "1.0.0",
+  "description": "Pagina web de presentacion de vlavid",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlavid/vlavid_personal_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vlavid/vlavid_personal_website/issues"
+  },
+  "homepage": "https://github.com/vlavid/vlavid_personal_website#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.26"
+  }
+}
