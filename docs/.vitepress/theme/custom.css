@@ -3,37 +3,28 @@
    ======================================== */
 
 :root {
-  /* Brand Colors */
-  --vp-c-brand-1: #6366f1;
-  --vp-c-brand-2: #818cf8;
-  --vp-c-brand-3: #a5b4fc;
-  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+  /* Brand Colors - Warmer & Friendlier */
+  --vp-c-brand-1: #8b5cf6; /* Violet */
+  --vp-c-brand-2: #ec4899; /* Pink */
+  --vp-c-brand-3: #f43f5e; /* Rose */
+  --vp-c-brand-soft: rgba(139, 92, 246, 0.14);
 
-  /* Accent Gradient */
-  --gradient-primary: linear-gradient(
-    135deg,
-    #6366f1 0%,
-    #8b5cf6 50%,
-    #d946ef 100%
-  );
-  --gradient-card: linear-gradient(
-    145deg,
-    rgba(30, 30, 46, 0.8),
-    rgba(24, 24, 37, 0.9)
-  );
-
+  /* Friendly Gradient */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #f43f5e 100%);
+  --gradient-card: linear-gradient(145deg, rgba(30, 30, 46, 0.6), rgba(40, 40, 55, 0.4));
+  
   /* Glass Effect */
-  --glass-bg: rgba(30, 30, 46, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-/* Dark mode by default */
+/* Dark mode by default - softer background */
 .dark {
-  --vp-c-bg: #0f0f17;
-  --vp-c-bg-soft: #1a1a2e;
-  --vp-c-bg-mute: #242438;
-  --vp-c-text-1: rgba(255, 255, 255, 0.95);
-  --vp-c-text-2: rgba(255, 255, 255, 0.7);
+  --vp-c-bg: #151521;
+  --vp-c-bg-soft: #1e1e2d;
+  --vp-c-bg-mute: #2a2a3b;
+  --vp-c-text-1: rgba(255, 255, 255, 0.92);
+  --vp-c-text-2: rgba(255, 255, 255, 0.75);
 }
 
 html {
@@ -75,18 +66,20 @@ html {
 .VPButton.brand {
   background: var(--gradient-primary) !important;
   border: none !important;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-  transition: all 0.3s ease !important;
+  border-radius: 50px !important; /* Pill shape */
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .VPButton.brand:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
 }
 
 .VPButton.alt {
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
+  border-radius: 50px !important;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease !important;
 }

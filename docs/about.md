@@ -1,60 +1,53 @@
-# About
+# Hola, soy Victor 👋
 
-Soy **Platform Engineer** con experiencia en entornos enterprise de alta criticidad. Mi foco está en diseñar sistemas que escalen, se recuperen solos y sean observables de arriba a abajo.
+Más que un "Ingeniero Cloud", me considero un **curioso profesional**.
 
-## Experiencia
+Llevo años trabajando en tecnología, y si algo he aprendido es que la herramienta de moda cambia cada 6 meses, pero los fundamentos y la actitud de aprendizaje son para siempre.
 
-- 🏢 **Operaciones Enterprise**: 15+ servicios en producción 24/7
-- 📈 **Alta volumetría**: Sistemas procesando ~4.000M de operaciones
-- 🤖 **AI/LLM en Producción**: Triage automático con LLM integrado en Grafana
-- 🛡️ **Security-first**: Arquitecturas alineadas con AWS Security Reference Architecture
+## ¿Por qué este sitio?
 
-## Stack técnico
+Durante mucho tiempo me enfoqué en "hacer currículum". Ahora quiero enfocarme en **hacer comunidad**.
 
-| Área | Tecnologías |
-|------|-------------|
-| **Cloud** | AWS (EC2, ECS, Lambda, RDS, S3, CloudFront, etc.) |
-| **IaC** | Terraform, CloudFormation, Ansible |
-| **Containers** | Docker, Kubernetes, ECS |
-| **CI/CD** | GitHub Actions, Jenkins, ArgoCD |
-| **Observability** | Grafana, Prometheus, CloudWatch, OpenTelemetry |
-| **Languages** | Python, Bash, Java, TypeScript |
-| **Frameworks** | Spring Boot, FastAPI |
+Este no es un portfolio para conseguir clientes (aunque si quieres charlar, encantado). Es mi libreta de apuntes en limpio. Aquí vuelco:
 
-## Filosofía
+- 🧱 Los problemas con los que me choco.
+- 💡 Las soluciones que encuentro (después de mucho Googlear).
+- 📚 Los recursos que realmente me han servido.
 
-> "En 2026 ya no gana el que sabe AWS. Gana el que sabe **operar**: SLO/p95, seguridad por defecto, IaC, observabilidad y rollback real."
+## Mi filosofía de trabajo
 
-Creo en:
-- **Infrastructure as Code** como fuente de verdad
-- **Observability** antes que debugging reactivo
-- **Automatización** para reducir toil
-- **Documentación** como parte del código
+> **"Nadie nace sabiendo deployar un cluster."**
+
+Creo en la tecnología **humana**. Detrás de cada sistema de "alta disponibilidad" hay personas que necesitan dormir, descansar y sentirse realizadas. 
+
+Me gusta trabajar en sistemas robustos no por "presumir de nines", sino para **vivir más tranquilo**. Si el sistema se cura solo, yo puedo disfrutar mi fin de semana.
 
 ---
 
-## Curriculum Vitae
+## ¿Charlamos?
+
+Me encanta conocer gente con las mismas inquietudes. No dudes en escribirme si:
+- Estás empezando y no sabes por dónde tirar.
+- Quieres debatir sobre alguna tecnología.
+- Simplemente quieres saludar.
 
 <div class="cta-section">
-  <a href="/cv.pdf" class="cta-button primary" target="_blank">
-    📄 Descargar CV (PDF)
+  <a href="https://linkedin.com/in/vlavid" class="cta-button primary">
+    Conectar en LinkedIn
+  </a>
+  <a href="mailto:vlavid@proton.me" class="cta-button secondary">
+    ✉️ Escribirme un mail
   </a>
 </div>
 
-<iframe src="/cv.pdf" class="cv-embed" title="CV"></iframe>
-
 ---
 
-## Contacto
+### Un poco de mi trayectoria técnica
+
+Si tienes curiosidad por lo que he hecho técnicamente, aquí te dejo mi hoja de vida formal.
 
 <div class="cta-section">
-  <a href="https://linkedin.com/in/vlavid" class="cta-button secondary">
-    LinkedIn
-  </a>
-  <a href="https://github.com/vlavid" class="cta-button secondary">
-    GitHub
-  </a>
-  <a href="mailto:vlavid@proton.me" class="cta-button primary">
-    ✉️ Email
+  <a href="/cv.pdf" class="cta-button alt" target="_blank">
+    📄 Ver CV (PDF)
   </a>
 </div>

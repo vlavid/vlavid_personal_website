@@ -3,30 +3,30 @@ import { defineConfig } from "vitepress";
 const githubUser = "vlavid";
 
 export default defineConfig({
-  title: "vlavid | AWS & DevOps Engineer",
+  title: "Victor Lavid",
   description:
-    "Platform Engineer especializado en AWS, DevOps, SRE y LLM Operations. 15+ servicios 24/7, alta volumetría y observabilidad enterprise.",
+    "Compartiendo aprendizajes sobre AWS, DevOps y estrategia de carrera tech. Un espacio para crecer juntos en la nube.",
 
   head: [
-    ["meta", { name: "author", content: "vlavid" }],
+    ["meta", { name: "author", content: "Victor Lavid" }],
     [
       "meta",
       {
         name: "keywords",
         content:
-          "AWS, DevOps, SRE, Platform Engineer, Cloud Architecture, Observability, LLM, Grafana",
+          "AWS, DevOps, Crecimiento Profesional, Cloud, Sharing Knowledge",
       },
     ],
     [
       "meta",
-      { property: "og:title", content: "vlavid | AWS & DevOps Engineer" },
+      { property: "og:title", content: "Victor Lavid | Creciendo en la Nube" },
     ],
     [
       "meta",
       {
         property: "og:description",
         content:
-          "Platform Engineer especializado en AWS, DevOps, SRE y LLM Operations",
+          "Compartiendo aprendizajes sobre AWS, DevOps y estrategia de carrera tech.",
       },
     ],
     ["meta", { property: "og:type", content: "website" }],
@@ -39,10 +39,10 @@ export default defineConfig({
 
     nav: [
       { text: "Inicio", link: "/" },
-      { text: "About", link: "/about" },
-      { text: "Projects", link: "/projects" },
-      { text: "Learning", link: "/learning" },
+      { text: "Sobre mí", link: "/about" },
+      { text: "Recursos", link: "/learning" },
       { text: "Blog", link: "/blog/" },
+      { text: "Proyectos", link: "/projects" },
     ],
 
     socialLinks: [
@@ -51,8 +51,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "AWS & DevOps | SRE | LLM Operations",
-      copyright: `© ${new Date().getFullYear()} vlavid`,
+      message: "Hecho con 💜 para la comunidad.",
+      copyright: `© ${new Date().getFullYear()} Victor Lavid`,
     },
 
     search: {
