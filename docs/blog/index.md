@@ -5,6 +5,12 @@ Artículos sobre AWS, DevOps, SRE y LLM Operations.
 ---
 
 <div class="blog-list">
+  <a href="/blog/spring-ai-agents" class="blog-post">
+    <h3>🚀 Construyendo Agentes con Spring AI y AWS Bedrock</h3>
+    <div class="date">Enero 2026</div>
+    <p>Arquitectura de agentes autónomos en Java: Function Calling, Bedrock y seguridad enterprise.</p>
+  </a>
+
   <a href="/blog/llm-triage-grafana" class="blog-post">
     <h3>LLM para Triage en Grafana: Cómo automatizar el primer análisis</h3>
     <div class="date">Enero 2026</div>

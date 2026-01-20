@@ -3,14 +3,44 @@ import { ref } from 'vue'
 
 const email = ref('')
 const loading = ref(false)
+const status = ref<'idle' | 'success' | 'error'>('idle')
+const message = ref('')
 
-// Placeholder action - user needs to replace this
-const formAction = 'https://buttondown.email/api/emails/embed-subscribe/victorlavid' 
+// TODO: Replace with your Terraform Output URL
+const API_URL = 'https://REPLACE_ME_WITH_YOUR_API_GATEWAY_URL/subscribe'
 
-const submit = (e: Event) => {
-  if (!formAction.includes('buttondown') && !formAction.includes('beehiiv')) {
-    alert('Configura tu URL de newsletter en Newsletter.vue')
-    e.preventDefault()
+const submit = async (e: Event) => {
+  e.preventDefault()
+  if (API_URL.includes('REPLACE_ME')) {
+    alert('Despliega la infraestructura primero y actualiza la URL en Newsletter.vue')
+    return
+  }
+
+  loading.value = true
+  status.value = 'idle'
+  message.value = ''
+
+  try {
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value })
+    })
+    
+    const data = await res.json()
+    
+    if (res.ok) {
+        status.value = 'success'
+        message.value = '¡Gracias por suscribirte!'
+        email.value = ''
+    } else {
+        throw new Error(data.message || 'Error al suscribirse')
+    }
+  } catch (err: any) {
+    status.value = 'error'
+    message.value = err.message
+  } finally {
+    loading.value = false
   }
 }
 </script>
@@ -20,17 +50,11 @@ const submit = (e: Event) => {
     <div class="content">
       <h3>📩 Recibe mis aprendizajes en tu correo</h3>
       <p>
-        Sin spam. Solo comparto recursos, reflexiones y guías sobre AWS y crecimiento profesional.
-        Date de baja cuando quieras.
+        Infraestructura inmutable, despliegues serverless y estrategia de carrera. 
+        Sin spam, directo a tu inbox.
       </p>
       
-      <form 
-        :action="formAction"
-        method="post"
-        target="popupwindow"
-        @submit="submit"
-        class="form"
-      >
+      <form @submit="submit" class="form">
         <input 
           type="email" 
           v-model="email"
@@ -38,13 +62,19 @@ const submit = (e: Event) => {
           placeholder="tu@email.com"
           required
           class="input"
+          :disabled="loading || status === 'success'"
         />
-        <button type="submit" class="submit-btn" :disabled="loading">
-          Suscribirse Gratis
+        <button type="submit" class="submit-btn" :disabled="loading || status === 'success'">
+          {{ loading ? 'Enviando...' : (status === 'success' ? '¡Suscrito!' : 'Suscribirse') }}
         </button>
       </form>
+
+      <div v-if="message" class="feedback" :class="status">
+        {{ message }}
+      </div>
+
       <div class="note">
-        <small>Powered by Buttondown/Beehiiv (Free Tier)</small>
+        <small>Powered by AWS Serverless (Lambda + DynamoDB)</small>
       </div>
     </div>
   </div>
@@ -53,7 +83,7 @@ const submit = (e: Event) => {
 <style scoped>
 .newsletter-card {
   margin: 64px 0;
-  padding: 2px; /* Gradient border width */
+  padding: 2px;
   background: var(--gradient-primary);
   border-radius: 18px;
   position: relative;
@@ -116,12 +146,27 @@ p {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  min-width: 140px;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background: var(--vp-c-brand-2);
   transform: translateY(-1px);
 }
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.feedback {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.feedback.success { color: #10b981; }
+.feedback.error { color: #ef4444; }
 
 .note {
   margin-top: 16px;
